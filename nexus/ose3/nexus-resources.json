@@ -10,7 +10,7 @@
          "apiVersion": "v1",
          "metadata": {
             "name": "nexus",
-            "namespace": "ci"
+            "namespace": "fisrepo"
          }
       },
       {
@@ -18,7 +18,7 @@
          "apiVersion": "v1",
          "metadata": {
             "name": "nexus",
-            "namespace": "ci"
+            "namespace": "fisrepo"
          },
          "spec": {
             "triggers": [
@@ -53,7 +53,7 @@
                   "from": {
                      "kind": "ImageStreamTag",
                      "name": "centos:7",
-                     "namespace": "ci"
+                     "namespace": "fisrepo"
                   }
                }
             },
@@ -61,7 +61,7 @@
                "to": {
                   "kind": "ImageStreamTag",
                   "name": "nexus:latest",
-                  "namespace": "ci"
+                  "namespace": "fisrepo"
                }
             },
             "resources": {}
@@ -72,7 +72,7 @@
          "apiVersion": "v1",
          "metadata": {
             "name": "centos",
-            "namespace": "ci"
+            "namespace": "fisrepo"
          },
          "spec": {
             "dockerImageRepository": "library/centos:centos7"
@@ -83,7 +83,7 @@
          "apiVersion": "v1",
          "metadata": {
             "name": "nexus",
-            "namespace": "ci"
+            "namespace": "fisrepo"
          },
          "spec": {
             "dockerImageRepository": "",
@@ -99,7 +99,7 @@
          "apiVersion": "v1",
          "metadata": {
             "name": "nexus-ephemeral",
-            "namespace": "ci",
+            "namespace": "fisrepo",
             "annotations": {
                "description": "Nexus service, with ephemeral storage. Scaling to more than one replica is not supported",
                "tags": "repository-managers,nexus"
@@ -140,7 +140,7 @@
                "apiVersion": "v1",
                "metadata": {
                   "name": "nexus",
-                  "namespace": "ci"
+                  "namespace": "fisrepo"
                },
                "spec": {
                   "strategy": {
@@ -175,7 +175,7 @@
                            "from": {
                               "kind": "ImageStreamTag",
                               "name": "${IMAGE_NAME}:${IMAGE_TAG}",
-                              "namespace": "ci"
+                              "namespace": "fisrepo"
                            }
                         }
                      }
@@ -255,7 +255,7 @@
                "apiVersion": "v1",
                "metadata": {
                   "name": "nexus",
-                  "namespace": "ci"
+                  "namespace": "fisrepo"
                },
                "spec": {
                   "host": "${APPLICATION_HOSTNAME}",
@@ -270,7 +270,7 @@
                "apiVersion": "v1",
                "metadata": {
                   "name": "nexus",
-                  "namespace": "ci"
+                  "namespace": "fisrepo"
                },
                "spec": {
                   "ports": [
@@ -294,7 +294,7 @@
          "apiVersion": "v1",
          "metadata": {
             "name": "nexus-persistent",
-            "namespace": "ci",
+            "namespace": "fisrepo",
             "annotations": {
                "description": "Nexus service, with persistent storage. Scaling to more than one replica is not supported",
                "tags": "repository-managers,nexus"
@@ -341,7 +341,7 @@
                "apiVersion": "v1",
                "metadata": {
                   "name": "nexus-claim",
-                  "namespace": "ci"
+                  "namespace": "fisrepo"
                },
                "spec": {
                   "accessModes": [
@@ -360,7 +360,7 @@
                "apiVersion": "v1",
                "metadata": {
                   "name": "nexus",
-                  "namespace": "ci"
+                  "namespace": "fisrepo"
                },
                "spec": {
                   "strategy": {
@@ -395,7 +395,7 @@
                            "from": {
                               "kind": "ImageStreamTag",
                               "name": "${IMAGE_NAME}:${IMAGE_TAG}",
-                              "namespace": "ci"
+                              "namespace": "fisrepo"
                            }
                         }
                      }
@@ -475,7 +475,7 @@
                "apiVersion": "v1",
                "metadata": {
                   "name": "nexus",
-                  "namespace": "ci"
+                  "namespace": "fisrepo"
                },
                "spec": {
                   "host": "${APPLICATION_HOSTNAME}",
@@ -490,7 +490,7 @@
                "apiVersion": "v1",
                "metadata": {
                   "name": "nexus",
-                  "namespace": "ci"
+                  "namespace": "fisrepo"
                },
                "spec": {
                   "ports": [
